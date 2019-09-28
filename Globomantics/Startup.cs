@@ -19,10 +19,16 @@ namespace Globomantics
         {
             services.AddControllersWithViews();
 
-            services.AddSingleton<IConferenceService, ConferenceMemoryService>();
+            //services.AddSingleton<IConferenceService, ConferenceMemoryService>();
+            //easily swap out the memory service with a real API service.
+            //The controller doesn't have to change, and that's exactly the reason why using an interface is recommended.With an interface, 
+            //the controller is decoupled from the actual implementation of the service class. 
+            services.AddSingleton<IConferenceService, ConferenceApiService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //This method configures the HTTP request pipeline of ASP.NET Core. The pipeline specifies how the application should respond to HTTP requests.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
