@@ -36,6 +36,7 @@ namespace Globomantics
                 app.UseDeveloperExceptionPage();
             }
 
+            //The important one is the StaticFiles middleware.If we don't add that, none of our images, CSS, and JavaScript files will be served to the browser. 
             app.UseStaticFiles();
             app.UseHttpsRedirection();
 
