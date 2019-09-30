@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Shared\**" />
+    <Content Remove="Shared\**" />
+    <EmbeddedResource Remove="Shared\**" />
+    <None Remove="Shared\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Shared\Shared.csproj" />
+  </ItemGroup>
+
 </Project>
