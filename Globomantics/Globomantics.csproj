@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Conference\" />
+    <Folder Include="Views\Conference\DisplayTemplates\" />
+    <Folder Include="Views\Proposal\" />
   </ItemGroup>
 
 </Project>
